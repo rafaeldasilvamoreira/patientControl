@@ -6,21 +6,12 @@
   color: white !important;             
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-  font-size: 16px;
-} 
 
-select { 
-  
-  font-size: 14px;
+
+select {    
   background-color: #282828;  
   appearance: none;
-  cursor: pointer;
-  width: 100%;
+  cursor: pointer;  
   transition: all 0.3s ease;
-}
+ }
 

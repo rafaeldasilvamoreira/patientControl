@@ -40,28 +40,27 @@ export function Patient() {
             <h1>Contato</h1>
             <input className="p-2 border border-gray-600 rounded-md w-full focus:outline-none focus:border-gray-200 mt-2 text-sm " type="text" placeholder="(19) 99252-5042" />
           </label>
-
           <label>
             <h1>Data de Nascimento</h1>
             <input className="p-2 border border-gray-600 rounded-md w-full focus:outline-none focus:border-gray-200 mt-2 text-sm"
               placeholder="18/02/2004" />
           </label>
-          <label className="flex flex-col justify-between ">
+          <label>
             <h1>Gênero</h1>
             <select
               id="sexyType"
-              className="p-2 border border-gray-600 rounded-md  w-full focus:outline-none focus:border-gray-200 text-sm">
+              className="p-2 border border-gray-600 rounded-md  w-full focus:outline-none focus:border-gray-200 mt-2 text-sm">
               <option selected >Escolha um gênero</option>
               <option value="US">Masculino</option>
               <option value="CA">Feminino</option>
               <option value="FR">Outro</option>
             </select>
           </label>
-          <label className="flex flex-col justify-between ">
+          <label >
             <h1>Tipo Sanguíneo</h1>
             <select
               id="bloodType"
-              className="p-2 border border-gray-600 rounded-md  w-full focus:outline-none focus:border-gray-200 text-sm">
+              className="p-2 border border-gray-600 rounded-md  w-full focus:outline-none focus:border-gray-200 mt-2 text-sm">
               <option selected >Escolha um Tipo Sanguíneo</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
@@ -71,7 +70,6 @@ export function Patient() {
               <option value="AB-">AB-</option>
               <option value="O+">O+</option>
               <option value="O-">O-</option>
-
             </select>
           </label>
           <label className="md:col-span-2">
