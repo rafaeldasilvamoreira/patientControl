@@ -11,25 +11,29 @@ export function ListPatient() {
       name: "John Doe",
       email: "jhondoe@gmail.com",
       dateRegister: "01/10/2023",
-      status: "Cadastrado"
+      age: "30",
+      bloodType: "O+",
     },
     {
       name: "Jane Smith",
       email: "jane@gmail.com",
       dateRegister: "04/05/2024",
-      status: "Cadastrado"
+      age: "30",
+      bloodType: "A+",
     },
     {
       name: "Alice Johnson",
       email: "alice@gmail.com",
       dateRegister: "12/06/2025",
-      status: "Cadastrado"
+      age: "30",
+      bloodType: "A",
     },
     {
       name: "Bob Brown",
       email: "bob@gmail.com",
       dateRegister: "15/07/2025",
-      status: "Cadastrado"
+      age: "30",
+      bloodType: "B-",
     },
   ];
 
@@ -65,11 +69,11 @@ export function ListPatient() {
           </thead>
           <tbody>
             {patientRegister.map((patient, index) => (
-              <tr key={index} className="border-b border-gray-600 hover:bg-gray-700 transition-colors">
+              <tr key={index} className="border-b   border-gray-600 hover:bg-gray-700 transition-colors">
                 <td className="py-4">{patient.name}</td>
                 <td className="py-4 hidden md:table-cell">{patient.email}</td>
-                <td className="py-4 hidden md:table-cell">N/A</td>
-                <td className="py-4 hidden md:table-cell">N/A</td>
+                <td className="py-4 hidden md:table-cell">{patient.age}</td>
+                <td className="py-4 hidden md:table-cell text-red-500/80">{patient.bloodType}</td>
                 <td className="py-4 hidden md:table-cell">{patient.dateRegister}</td>
                 <td className="py-4">
                   <div className="flex gap-4 ">

@@ -102,8 +102,8 @@ export function Dashboard() {
         </div>
 
         <button className="flex items-center gap-2 bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors cursor-pointer"
-          onClick={() => {
-            navigate("patient");
+          onClick={() => {  
+            navigate("patient");  
           }}>
           <UserPlus size={20} />
            <h1 className="hidden md:block">Novo Paciente</h1>

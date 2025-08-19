@@ -14,10 +14,12 @@
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-custom-scrollbars-2": "^4.5.0",
+    "react-datepicker": "^8.6.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.0",
     "react-scroll-to-bottom": "^4.2.0",
     "react-scrollable-feed": "^2.0.3",
+    "react-toastify": "^11.0.5",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
