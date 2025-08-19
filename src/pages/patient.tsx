@@ -115,11 +115,11 @@ export function Patient() {
         <div className="grid grid-cols-1 gap-4">
           <label>
             <h1>Histórico Médico</h1>
-            <input className="p-2  py-6  border border-gray-600 rounded-md w-full focus:outline-none focus:border-gray-200 mt-2 text-sm" type="text" placeholder="Hipertenção" />
+            <input className="p-2 pb-8 border border-gray-600 rounded-md w-full focus:outline-none focus:border-gray-200 mt-2 text-sm" type="text" placeholder="Hipertenção" />
           </label>
           <label>
             <h1>Alergias</h1>
-            <input className="p-2  py-6  border border-gray-600 rounded-md w-full focus:outline-none focus:border-gray-200 mt-2 text-sm" type="text" placeholder="Camarão" />
+            <input className="p-2  pb-8  border border-gray-600 rounded-md w-full focus:outline-none focus:border-gray-200 mt-2 text-sm" type="text" placeholder="Camarão" />
           </label>
           <label>
             <h1>Medicamentos em uso</h1>

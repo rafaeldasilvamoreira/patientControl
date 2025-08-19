@@ -1,10 +1,12 @@
-import { Eye, SquarePen, Trash, UserPlus } from "lucide-react";
+import  { useState, useEffect } from 'react';
+import {UserPlus } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
+import SkeletonPacient from './skeletons/skeletonPatient'; 
 
 export function ListPatient() {
 
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   const patientRegister = [
     {
@@ -37,11 +39,17 @@ export function ListPatient() {
     },
   ];
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false); // Após 3 segundos, simula o carregamento dos dados
+    }, 3000);
+  }, []);
+
   return (
-    <div className="flex flex-col gap-6 " >
+    <div className="flex flex-col gap-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold">Pacientes </h1>
+          <h1 className="text-2xl font-bold">Pacientes</h1>
           <p className="text-gray-500">Gerencie todos os pacientes cadastrados</p>
         </div>
         <button className="flex items-center gap-2 bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors cursor-pointer"
@@ -54,40 +62,16 @@ export function ListPatient() {
       </div>
 
       <div className="bg-[#282828] rounded-lg shadow-md p-4">
-        <input className="flex w-full p-2 border border-gray-600 focus:outline-none focus:border-gray-200 rounded-md" type="text" placeholder="Buscar pacientes por nome, email ou telefone... " />
-      </div>
-      <div className="bg-[#282828] rounded-lg shadow-md p-4 overflow-x-auto">
-        <table className="min-w-full text-left">
-          <thead>
-            <tr className="border-b border-gray-600">
-              <th className="py-4">Paciente</th>
-              <th className="py-4 hidden md:table-cell">Contato</th>
-              <th className="py-4 hidden md:table-cell">Idade</th>
-              <th className="py-4 hidden md:table-cell">Tipo Sanguíneo</th>
-              <th className="py-4 hidden md:table-cell">Cadastro</th>
-            </tr>
-          </thead>
-          <tbody>
-            {patientRegister.map((patient, index) => (
-              <tr key={index} className="border-b   border-gray-600 hover:bg-gray-700 transition-colors">
-                <td className="py-4">{patient.name}</td>
-                <td className="py-4 hidden md:table-cell">{patient.email}</td>
-                <td className="py-4 hidden md:table-cell">{patient.age}</td>
-                <td className="py-4 hidden md:table-cell text-red-500/80">{patient.bloodType}</td>
-                <td className="py-4 hidden md:table-cell">{patient.dateRegister}</td>
-                <td className="py-4">
-                  <div className="flex gap-4 ">
-                    <Eye className="text-green-500 cursor-pointer" size={20} />
-                    <SquarePen className="text-gray-400 cursor-pointer" size={20} />
-                    <Trash className="text-red-400 cursor-pointer" size={20} />
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <input
+          className="flex w-full p-2 border border-gray-600 focus:outline-none focus:border-gray-200 rounded-md"
+          type="text"
+          placeholder="Buscar pacientes por nome ou email..."
+        />
       </div>
 
+      {/* Chame o SkeletonLoader aqui */}
+      <SkeletonPacient
+       loading={loading} data={patientRegister} />
     </div>
-  )
+  );
 }
